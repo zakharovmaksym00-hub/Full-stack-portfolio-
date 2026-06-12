@@ -1,21 +1,21 @@
 {
-  "name": "danny-portfolio",
+  "name": "Danny-portfolio",
   "private": true,
   "version": "1.0.0",
-  "description": "Portfolio of Danny Montoya — a painterly bookshelf of projects plus a small magazine of writing.",
+  "description": "Portfolio of Danny Katoshi \u2014 a painterly bookshelf of projects plus a small magazine of writing.",
   "author": {
-    "name": "Danny Montoya",
+    "name": "Danny Katoshi",
     "email": "dfmreyes02@gmail.com"
   },
   "license": "UNLICENSED",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node api.js && vite",
+    "build": "node api.js && vite build",
     "preview": "vite preview",
     "heartbeat": "node server/heartbeat.js",
     "prestart": "lsof -ti:4317 -ti:5180 | xargs kill -9 2>/dev/null; exit 0",
-    "start": "concurrently -k \"npm:heartbeat\" \"npm:dev\""
+    "start": "node api.js && concurrently -k \"npm:heartbeat\" \"npm:dev\""
   },
   "dependencies": {
     "@tsparticles/engine": "^3.9.1",
